@@ -24,7 +24,7 @@ def initialize_serial():
 
 
 def play_audio(audio_file):
-    os.system('mplayer -volume 325 %s' % audio_file)
+    os.system('mplayer -volume 100 %s' % audio_file)
     
 # 保存局部变量到文件
 def save_variable_to_file(value):
@@ -71,7 +71,7 @@ def action_neo(text):
             
             while True:
                 play_audio('resources/pose.MP3')
-                send_bytes = DataPackageConverter("WanYao.bin").hex_output
+                send_bytes = DataPackageConverter("0deer_see.bin").hex_output
                 send_serial_data(ser, send_bytes)
 
                 play_audio('resources/dong.wav')
@@ -94,19 +94,9 @@ def action_neo(text):
                 
                 # 使用初始化好的识别器实例
                 print("请在摄像头前保持姿势...")
-                try:
-                    # 调用静态姿势识别函数
-                    pose = pose_identifier.recognize_posture(camera_index=0, timeout=15, stable_duration=2.0, display=True,camera_rotation = 90)
-                except cv2.error as e:
-                    print(f"摄像头访问错误: {e}")
-                    play_audio('resources/sorry.MP3')
-                    break
-                except Exception as e:
-                    print(f"姿势识别过程中发生错误: {e}")
-                    play_audio('resources/sorry.MP3')
-                    break
-                    
-                send_bytes = DataPackageConverter("FuWei.bin").hex_output
+                # 调用静态姿势识别函数
+                pose = pose_identifier.recognize_posture(camera_index=0, timeout=15, stable_duration=2.0, display=True,camera_rotation = 180)
+                send_bytes = DataPackageConverter("0deer_reset.bin").hex_output
                 send_serial_data(ser, send_bytes)
                 
                 if pose is None:
@@ -126,10 +116,10 @@ def action_neo(text):
             play_audio("resources/rhythm.MP3")
             matched_song, compare_result = rhythm_recog()
             play_audio("resources/index"+matched_song) # 歌曲名称
-            if matched_song == "Angeline.MP3":
-                movements = DataPackageConverter("choice.odr").hex_output
+            if matched_song == "TryEverything.MP3":
+                movements = DataPackageConverter("0deer_dance2.odr").hex_output
             else:
-                movements = DataPackageConverter("dance.odr").hex_output
+                movements = DataPackageConverter("0deer_dance1.odr").hex_output
             ser.write(bytearray(movements)) # 执行动作
             play_audio("resources/"+matched_song) # 播放歌曲
 
@@ -198,10 +188,6 @@ def action_neo(text):
                 else:
                     # 成功执行动作后，提示继续或结束
                     print("动作执行完成，请继续说出下一个动作指令，或说'结束'退出")
-
-        elif keyword == "choushui":
-            send_bytes = DataPackageConverter("choushui.bin").hex_output
-            send_serial_data(ser, send_bytes)
         
         else:
             play_audio("resources/" + keyword + ".MP3")
@@ -221,8 +207,8 @@ def action_neo(text):
 def send_serial_data(ser, data):
     ser.write(bytearray(data))
     start_time = time.time()  # 记录开始时间
-    timeout = 10  # 设置10秒超时
-    
+    timeout = 30  # 设置30秒超时
+
     while True:
         # 检查是否超时
         if time.time() - start_time > timeout:
@@ -236,7 +222,7 @@ def send_serial_data(ser, data):
             ser.flushInput()  # 情况接收缓存区
             if res == b'\xff\x00\x05\x05\x00\x00\x18"' or res == b'\xff\x00\x05\x05\x00\x00\x19"':
                 break
-        time.sleep(0.5)  # 软件延时
+            time.sleep(0.5)  # 软件延时
             
 
 

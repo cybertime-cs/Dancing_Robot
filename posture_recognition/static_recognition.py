@@ -27,7 +27,7 @@ class StaticPostureIdentifier:
         """
         # 设置当前目录和模型路径
         self.current_dir = os.path.dirname(os.path.abspath(__file__))
-        self.recognizer_path = os.path.join(self.current_dir, "output", "abao_pose_recognizer.pickle")
+        self.recognizer_path = os.path.join(self.current_dir, "output", "honglian_pose_recognizer.pickle")
         
         # 设置摄像头旋转角度
         if camera_rotation not in [0, 90, 180, 270]:
