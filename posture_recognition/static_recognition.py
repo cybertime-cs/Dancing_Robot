@@ -27,7 +27,7 @@ class StaticPostureIdentifier:
         """
         # 设置当前目录和模型路径
         self.current_dir = os.path.dirname(os.path.abspath(__file__))
-        self.recognizer_path = os.path.join(self.current_dir, "output", "honglian_pose_recognizer.pickle")
+        self.recognizer_path = os.path.join(self.current_dir, "output", "zhurong_pose_recognizer.pickle")
         
         # 设置摄像头旋转角度
         if camera_rotation not in [0, 90, 180, 270]:
@@ -166,7 +166,9 @@ class StaticPostureIdentifier:
         current_posture = None
         start_time = time.time()
         last_detection_time = 0
-        
+        # --- 新增：初始化 FPS 计算变量 ---
+        prev_frame_time = 0 # 上一帧的时间戳
+        new_frame_time = 0 # 当前帧的时间戳
         print("请在摄像头前保持稳定姿势...")
         if self.camera_rotation != 0:
             print(f"摄像头已设置为旋转 {self.camera_rotation} 度")
@@ -181,9 +183,18 @@ class StaticPostureIdentifier:
                 
                 # 识别姿势
                 annotated_frame, has_posture, detected_posture = self.use(frame)
-                
+                delta_time = new_frame_time - prev_frame_time
+         # 只有当时间差不为 0 时才计算 FPS (跳过第一帧)
+                if delta_time > 0:
+                    fps = 1 / delta_time
+            # 更新上一帧时间
+                    prev_frame_time = new_frame_time
+            # 保留两位小数
+                    fps_text = f"FPS: {round(fps, 2)}"
+                else:
+            # 第一帧或者时间异常时，不显示或显示待机
+                    fps_text = "FPS: --"
                 current_time = time.time()
-                
                 # 如果已经超时，退出循环
                 if current_time - start_time > timeout:
                     print("识别超时")
@@ -262,7 +273,7 @@ class StaticPostureIdentifier:
 if __name__ == "__main__":
     # 测试代码 - 可以测试不同的旋转角度
     print("测试普通姿势识别（0度）...")
-    pose_identifier = StaticPostureIdentifier(camera_rotation=0)
+    pose_identifier = StaticPostureIdentifier(camera_rotation=270)
     pose = pose_identifier.recognize_posture(camera_index=0, timeout=15, stable_duration=2.0, display=True)
     if pose:
         print(f"识别到的姿势: {pose}")

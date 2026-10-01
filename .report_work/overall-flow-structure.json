@@ -1,0 +1,1708 @@
+{
+  "nodes": {
+    "start": {
+      "id": "start",
+      "cx": 155,
+      "cy": 267,
+      "w": 150,
+      "h": 74,
+      "lines": "启动",
+      "shape": "pill",
+      "color": "#256395",
+      "fill": "#EDF4FC",
+      "size": 32,
+      "dashed": false,
+      "bold": true
+    },
+    "init": {
+      "id": "init",
+      "cx": 421,
+      "cy": 267,
+      "w": 310,
+      "h": 126,
+      "lines": "加载离线语音模型\n初始化姿态识别器",
+      "shape": "rect",
+      "color": "#256395",
+      "fill": "white",
+      "size": 31,
+      "dashed": false,
+      "bold": false
+    },
+    "wake": {
+      "id": "wake",
+      "cx": 741,
+      "cy": 267,
+      "w": 270,
+      "h": 140,
+      "lines": "检测到\n唤醒词？",
+      "shape": "diamond",
+      "color": "#256395",
+      "fill": "white",
+      "size": 29,
+      "dashed": false,
+      "bold": false
+    },
+    "release": {
+      "id": "release",
+      "cx": 1080,
+      "cy": 267,
+      "w": 346,
+      "h": 126,
+      "lines": "释放唤醒录音流\n提示录入功能指令",
+      "shape": "rect",
+      "color": "#256395",
+      "fill": "white",
+      "size": 32,
+      "dashed": false,
+      "bold": false
+    },
+    "asr": {
+      "id": "asr",
+      "cx": 1445,
+      "cy": 267,
+      "w": 320,
+      "h": 126,
+      "lines": "采集语音并转写\nVosk：输出文本",
+      "shape": "rect",
+      "color": "#256395",
+      "fill": "white",
+      "size": 32,
+      "dashed": false,
+      "bold": false
+    },
+    "serial": {
+      "id": "serial",
+      "cx": 1889,
+      "cy": 267,
+      "w": 464,
+      "h": 126,
+      "lines": "读取关键词配置\n初始化串口（115200）",
+      "shape": "rect",
+      "color": "#256395",
+      "fill": "white",
+      "size": 32,
+      "dashed": false,
+      "bold": false
+    },
+    "mode": {
+      "id": "mode",
+      "cx": 1120,
+      "cy": 446,
+      "w": 372,
+      "h": 140,
+      "lines": "匹配到\n功能指令？",
+      "shape": "diamond",
+      "color": "#256395",
+      "fill": "white",
+      "size": 30,
+      "dashed": false,
+      "bold": false
+    },
+    "invalid": {
+      "id": "invalid",
+      "cx": 1960,
+      "cy": 499,
+      "w": 352,
+      "h": 82,
+      "lines": "播报未识别提示",
+      "shape": "rect",
+      "color": "#6C7B8F",
+      "fill": "white",
+      "size": 31,
+      "dashed": false,
+      "bold": false
+    },
+    "finish": {
+      "id": "finish",
+      "cx": 1120,
+      "cy": 2286,
+      "w": 452,
+      "h": 84,
+      "lines": "本轮任务处理返回",
+      "shape": "pill",
+      "color": "#256395",
+      "fill": "#EDF4FC",
+      "size": 34,
+      "dashed": false,
+      "bold": true
+    },
+    "v_input": {
+      "id": "v_input",
+      "cx": 305,
+      "cy": 753,
+      "w": 350,
+      "h": 108,
+      "lines": "提示并采集动作指令\nVosk 转写为文本",
+      "shape": "rect",
+      "color": "#256395",
+      "fill": "white",
+      "size": 31,
+      "dashed": false,
+      "bold": false
+    },
+    "v_exit": {
+      "id": "v_exit",
+      "cx": 305,
+      "cy": 910,
+      "w": 350,
+      "h": 140,
+      "lines": "包含动作模式\n退出指令？",
+      "shape": "diamond",
+      "color": "#256395",
+      "fill": "white",
+      "size": 28,
+      "dashed": false,
+      "bold": false
+    },
+    "v_map": {
+      "id": "v_map",
+      "cx": 305,
+      "cy": 1080,
+      "w": 350,
+      "h": 102,
+      "lines": "按指令词表匹配\n跳过黑名单类别",
+      "shape": "rect",
+      "color": "#256395",
+      "fill": "white",
+      "size": 32,
+      "dashed": false,
+      "bold": false
+    },
+    "v_valid": {
+      "id": "v_valid",
+      "cx": 305,
+      "cy": 1254,
+      "w": 350,
+      "h": 136,
+      "lines": "匹配到\n有效动作？",
+      "shape": "diamond",
+      "color": "#256395",
+      "fill": "white",
+      "size": 30,
+      "dashed": false,
+      "bold": false
+    },
+    "v_execute": {
+      "id": "v_execute",
+      "cx": 305,
+      "cy": 1420,
+      "w": 350,
+      "h": 108,
+      "lines": "动作映射与提示\n串口下发并等待返回¹",
+      "shape": "rect",
+      "color": "#256395",
+      "fill": "white",
+      "size": 30,
+      "dashed": false,
+      "bold": false
+    },
+    "v_reset": {
+      "id": "v_reset",
+      "cx": 305,
+      "cy": 1581,
+      "w": 350,
+      "h": 102,
+      "lines": "连续失败计数清零\n提示继续输入",
+      "shape": "rect",
+      "color": "#256395",
+      "fill": "white",
+      "size": 31,
+      "dashed": false,
+      "bold": false
+    },
+    "v_fail": {
+      "id": "v_fail",
+      "cx": 305,
+      "cy": 1750,
+      "w": 350,
+      "h": 108,
+      "lines": "播放未匹配提示\n连续失败次数加 1",
+      "shape": "rect",
+      "color": "#256395",
+      "fill": "white",
+      "size": 32,
+      "dashed": false,
+      "bold": false
+    },
+    "v_limit": {
+      "id": "v_limit",
+      "cx": 305,
+      "cy": 1915,
+      "w": 350,
+      "h": 136,
+      "lines": "连续失败\n达到 3 次？",
+      "shape": "diamond",
+      "color": "#256395",
+      "fill": "white",
+      "size": 30,
+      "dashed": false,
+      "bold": false
+    },
+    "v_end": {
+      "id": "v_end",
+      "cx": 305,
+      "cy": 2076,
+      "w": 330,
+      "h": 70,
+      "lines": "退出语音动作模式",
+      "shape": "pill",
+      "color": "#256395",
+      "fill": "white",
+      "size": 30,
+      "dashed": false,
+      "bold": false
+    },
+    "p_prepare": {
+      "id": "p_prepare",
+      "cx": 845,
+      "cy": 753,
+      "w": 350,
+      "h": 108,
+      "lines": "准备动作与提示\n调用姿态识别器",
+      "shape": "rect",
+      "color": "#237B68",
+      "fill": "white",
+      "size": 32,
+      "dashed": false,
+      "bold": false
+    },
+    "p_frame": {
+      "id": "p_frame",
+      "cx": 845,
+      "cy": 942,
+      "w": 350,
+      "h": 156,
+      "lines": "图像采集与方向校正\nMediaPipe 提取关键点\n二维特征输入姿态分类器\n类别变化或丢失则重新计时",
+      "shape": "rect",
+      "color": "#237B68",
+      "fill": "white",
+      "size": 27,
+      "dashed": false,
+      "bold": false
+    },
+    "p_timeout": {
+      "id": "p_timeout",
+      "cx": 845,
+      "cy": 1126,
+      "w": 364,
+      "h": 142,
+      "lines": "超过 15 秒\n或图像不可用？",
+      "shape": "diamond",
+      "color": "#237B68",
+      "fill": "white",
+      "size": 27,
+      "dashed": false,
+      "bold": false
+    },
+    "p_stable": {
+      "id": "p_stable",
+      "cx": 845,
+      "cy": 1301,
+      "w": 350,
+      "h": 140,
+      "lines": "同一姿态\n稳定 2 秒？",
+      "shape": "diamond",
+      "color": "#237B68",
+      "fill": "white",
+      "size": 30,
+      "dashed": false,
+      "bold": false
+    },
+    "p_return": {
+      "id": "p_return",
+      "cx": 845,
+      "cy": 1470,
+      "w": 350,
+      "h": 104,
+      "lines": "执行复位动作\n获得稳定姿态标签",
+      "shape": "rect",
+      "color": "#237B68",
+      "fill": "white",
+      "size": 32,
+      "dashed": false,
+      "bold": false
+    },
+    "p_stop": {
+      "id": "p_stop",
+      "cx": 845,
+      "cy": 1644,
+      "w": 350,
+      "h": 136,
+      "lines": "识别到\n停止姿态？",
+      "shape": "diamond",
+      "color": "#237B68",
+      "fill": "white",
+      "size": 30,
+      "dashed": false,
+      "bold": false
+    },
+    "p_execute": {
+      "id": "p_execute",
+      "cx": 845,
+      "cy": 1822,
+      "w": 350,
+      "h": 112,
+      "lines": "姿态映射与语音提示\n下发 .bin 并等待返回¹",
+      "shape": "rect",
+      "color": "#237B68",
+      "fill": "white",
+      "size": 30,
+      "dashed": false,
+      "bold": false
+    },
+    "p_end": {
+      "id": "p_end",
+      "cx": 845,
+      "cy": 2076,
+      "w": 350,
+      "h": 94,
+      "lines": "复位并播放提示\n退出姿态模式",
+      "shape": "pill",
+      "color": "#237B68",
+      "fill": "white",
+      "size": 30,
+      "dashed": false,
+      "bold": false
+    },
+    "r_input": {
+      "id": "r_input",
+      "cx": 1385,
+      "cy": 753,
+      "w": 350,
+      "h": 108,
+      "lines": "输入 15 秒短音频\n加载离线参考特征库",
+      "shape": "rect",
+      "color": "#B27522",
+      "fill": "white",
+      "size": 31,
+      "dashed": false,
+      "bold": false
+    },
+    "r_features": {
+      "id": "r_features",
+      "cx": 1385,
+      "cy": 978,
+      "w": 350,
+      "h": 178,
+      "lines": "转为 8 kHz 单声道\n四频段能量变化特征\n特征步长 32 ms\n8 秒滑窗相关比较",
+      "shape": "rect",
+      "color": "#B27522",
+      "fill": "white",
+      "size": 31,
+      "dashed": false,
+      "bold": false
+    },
+    "r_gate": {
+      "id": "r_gate",
+      "cx": 1385,
+      "cy": 1210,
+      "w": 372,
+      "h": 180,
+      "lines": "得分 ≥ 0.45\n且领先差值\n≥ 0.10？",
+      "shape": "diamond",
+      "color": "#B27522",
+      "fill": "white",
+      "size": 28,
+      "dashed": false,
+      "bold": false
+    },
+    "r_match": {
+      "id": "r_match",
+      "cx": 1385,
+      "cy": 1410,
+      "w": 350,
+      "h": 108,
+      "lines": "输出匹配曲目\n映射舞蹈动作文件",
+      "shape": "rect",
+      "color": "#B27522",
+      "fill": "white",
+      "size": 32,
+      "dashed": false,
+      "bold": false
+    },
+    "r_send": {
+      "id": "r_send",
+      "cx": 1385,
+      "cy": 1605,
+      "w": 350,
+      "h": 108,
+      "lines": "封装 .odr 指令\n串口下发舞蹈序列",
+      "shape": "rect",
+      "color": "#B27522",
+      "fill": "white",
+      "size": 32,
+      "dashed": false,
+      "bold": false
+    },
+    "r_play": {
+      "id": "r_play",
+      "cx": 1385,
+      "cy": 1793,
+      "w": 350,
+      "h": 108,
+      "lines": "播放对应歌曲\n机器人执行舞蹈",
+      "shape": "rect",
+      "color": "#B27522",
+      "fill": "white",
+      "size": 32,
+      "dashed": false,
+      "bold": false
+    },
+    "r_unknown": {
+      "id": "r_unknown",
+      "cx": 1385,
+      "cy": 1954,
+      "w": 350,
+      "h": 78,
+      "lines": "返回“未识别”",
+      "shape": "rect",
+      "color": "#B27522",
+      "fill": "white",
+      "size": 31,
+      "dashed": false,
+      "bold": false
+    },
+    "r_end": {
+      "id": "r_end",
+      "cx": 1385,
+      "cy": 2076,
+      "w": 350,
+      "h": 70,
+      "lines": "本轮韵律流程结束",
+      "shape": "pill",
+      "color": "#B27522",
+      "fill": "white",
+      "size": 30,
+      "dashed": false,
+      "bold": false
+    },
+    "d_input": {
+      "id": "d_input",
+      "cx": 1925,
+      "cy": 753,
+      "w": 350,
+      "h": 108,
+      "lines": "提示提问并采集语音\nVosk 输出问题文本",
+      "shape": "rect",
+      "color": "#7552A0",
+      "fill": "white",
+      "size": 31,
+      "dashed": false,
+      "bold": false
+    },
+    "d_exit": {
+      "id": "d_exit",
+      "cx": 1925,
+      "cy": 919,
+      "w": 350,
+      "h": 138,
+      "lines": "包含“结束”\n或“退出”？",
+      "shape": "diamond",
+      "color": "#7552A0",
+      "fill": "white",
+      "size": 28,
+      "dashed": false,
+      "bold": false
+    },
+    "d_query": {
+      "id": "d_query",
+      "cx": 1925,
+      "cy": 1088,
+      "w": 350,
+      "h": 128,
+      "lines": "Ollama 本地接口\n127.0.0.1:11434\nqwen:0.5b 单轮生成",
+      "shape": "rect",
+      "color": "#7552A0",
+      "fill": "white",
+      "size": 28,
+      "dashed": false,
+      "bold": false
+    },
+    "d_chunk": {
+      "id": "d_chunk",
+      "cx": 1925,
+      "cy": 1251,
+      "w": 350,
+      "h": 108,
+      "lines": "顺序接收文本块\n清理 *、# 并缓存",
+      "shape": "rect",
+      "color": "#7552A0",
+      "fill": "white",
+      "size": 31,
+      "dashed": false,
+      "bold": false
+    },
+    "d_segment": {
+      "id": "d_segment",
+      "cx": 1925,
+      "cy": 1418,
+      "w": 370,
+      "h": 160,
+      "lines": "句末标点或\n缓存长度 > 30？",
+      "shape": "diamond",
+      "color": "#7552A0",
+      "fill": "white",
+      "size": 27,
+      "dashed": false,
+      "bold": false
+    },
+    "d_speak": {
+      "id": "d_speak",
+      "cx": 1925,
+      "cy": 1583,
+      "w": 350,
+      "h": 102,
+      "lines": "eSpeak 中文播报\n播报完成后继续处理",
+      "shape": "rect",
+      "color": "#7552A0",
+      "fill": "white",
+      "size": 30,
+      "dashed": false,
+      "bold": false
+    },
+    "d_done": {
+      "id": "d_done",
+      "cx": 1925,
+      "cy": 1750,
+      "w": 350,
+      "h": 136,
+      "lines": "流式响应\n已结束？",
+      "shape": "diamond",
+      "color": "#7552A0",
+      "fill": "white",
+      "size": 30,
+      "dashed": false,
+      "bold": false
+    },
+    "d_tail": {
+      "id": "d_tail",
+      "cx": 1925,
+      "cy": 1915,
+      "w": 350,
+      "h": 108,
+      "lines": "播报末尾缓存\n继续下一轮提问",
+      "shape": "rect",
+      "color": "#7552A0",
+      "fill": "white",
+      "size": 32,
+      "dashed": false,
+      "bold": false
+    },
+    "d_end": {
+      "id": "d_end",
+      "cx": 1925,
+      "cy": 2076,
+      "w": 330,
+      "h": 70,
+      "lines": "退出人机交互模式",
+      "shape": "pill",
+      "color": "#7552A0",
+      "fill": "white",
+      "size": 30,
+      "dashed": false,
+      "bold": false
+    }
+  },
+  "edges": [
+    {
+      "src": "start",
+      "dst": "init",
+      "points": [
+        [
+          230.0,
+          267
+        ],
+        [
+          266.0,
+          267
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": "init",
+      "dst": "wake",
+      "points": [
+        [
+          576.0,
+          267
+        ],
+        [
+          606.0,
+          267
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": "wake",
+      "dst": "wake",
+      "points": [
+        [
+          741,
+          197.0
+        ],
+        [
+          741,
+          174
+        ],
+        [
+          603,
+          174
+        ],
+        [
+          603,
+          267
+        ],
+        [
+          606.0,
+          267
+        ]
+      ],
+      "label": "否"
+    },
+    {
+      "src": "wake",
+      "dst": "release",
+      "points": [
+        [
+          876.0,
+          267
+        ],
+        [
+          907.0,
+          267
+        ]
+      ],
+      "label": "是"
+    },
+    {
+      "src": "release",
+      "dst": "asr",
+      "points": [
+        [
+          1253.0,
+          267
+        ],
+        [
+          1285.0,
+          267
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": "asr",
+      "dst": "serial",
+      "points": [
+        [
+          1605.0,
+          267
+        ],
+        [
+          1657.0,
+          267
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": "serial",
+      "dst": "mode",
+      "points": [
+        [
+          1889,
+          330.0
+        ],
+        [
+          1889,
+          370
+        ],
+        [
+          1120,
+          370
+        ],
+        [
+          1120,
+          376.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": "mode",
+      "dst": "invalid",
+      "points": [
+        [
+          1306.0,
+          446
+        ],
+        [
+          1960,
+          446
+        ],
+        [
+          1960,
+          458.0
+        ]
+      ],
+      "label": "否"
+    },
+    {
+      "src": "invalid",
+      "dst": "finish",
+      "points": [
+        [
+          1960,
+          540.0
+        ],
+        [
+          1960,
+          562
+        ],
+        [
+          2205,
+          562
+        ],
+        [
+          2205,
+          2213
+        ],
+        [
+          1120,
+          2213
+        ],
+        [
+          1120,
+          2244.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": "mode",
+      "dst": null,
+      "points": [
+        [
+          1120,
+          516.0
+        ],
+        [
+          1120,
+          565
+        ]
+      ],
+      "label": "是"
+    },
+    {
+      "src": null,
+      "dst": null,
+      "points": [
+        [
+          305,
+          565
+        ],
+        [
+          1925,
+          565
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": null,
+      "dst": "v_input",
+      "points": [
+        [
+          305,
+          565
+        ],
+        [
+          305,
+          699.0
+        ]
+      ],
+      "label": "计数置零"
+    },
+    {
+      "src": "v_input",
+      "dst": "v_exit",
+      "points": [
+        [
+          305,
+          807.0
+        ],
+        [
+          305,
+          840.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": "v_exit",
+      "dst": "v_map",
+      "points": [
+        [
+          305,
+          980.0
+        ],
+        [
+          305,
+          1029.0
+        ]
+      ],
+      "label": "否"
+    },
+    {
+      "src": "v_exit",
+      "dst": "v_end",
+      "points": [
+        [
+          480.0,
+          910
+        ],
+        [
+          529,
+          910
+        ],
+        [
+          529,
+          2018
+        ],
+        [
+          305,
+          2018
+        ],
+        [
+          305,
+          2041.0
+        ]
+      ],
+      "label": "是"
+    },
+    {
+      "src": "v_map",
+      "dst": "v_valid",
+      "points": [
+        [
+          305,
+          1131.0
+        ],
+        [
+          305,
+          1186.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": "v_valid",
+      "dst": "v_execute",
+      "points": [
+        [
+          305,
+          1322.0
+        ],
+        [
+          305,
+          1366.0
+        ]
+      ],
+      "label": "是"
+    },
+    {
+      "src": "v_valid",
+      "dst": "v_fail",
+      "points": [
+        [
+          480.0,
+          1254
+        ],
+        [
+          500,
+          1254
+        ],
+        [
+          500,
+          1750
+        ],
+        [
+          480.0,
+          1750
+        ]
+      ],
+      "label": "否"
+    },
+    {
+      "src": "v_execute",
+      "dst": "v_reset",
+      "points": [
+        [
+          305,
+          1474.0
+        ],
+        [
+          305,
+          1530.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": "v_reset",
+      "dst": "v_input",
+      "points": [
+        [
+          130.0,
+          1581
+        ],
+        [
+          101,
+          1581
+        ],
+        [
+          101,
+          753
+        ],
+        [
+          130.0,
+          753
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": "v_fail",
+      "dst": "v_limit",
+      "points": [
+        [
+          305,
+          1804.0
+        ],
+        [
+          305,
+          1847.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": "v_limit",
+      "dst": "v_input",
+      "points": [
+        [
+          130.0,
+          1915
+        ],
+        [
+          101,
+          1915
+        ],
+        [
+          101,
+          753
+        ],
+        [
+          130.0,
+          753
+        ]
+      ],
+      "label": "否"
+    },
+    {
+      "src": "v_limit",
+      "dst": "v_end",
+      "points": [
+        [
+          480.0,
+          1915
+        ],
+        [
+          529,
+          1915
+        ],
+        [
+          529,
+          2018
+        ],
+        [
+          305,
+          2018
+        ],
+        [
+          305,
+          2041.0
+        ]
+      ],
+      "label": "是"
+    },
+    {
+      "src": null,
+      "dst": "p_prepare",
+      "points": [
+        [
+          845,
+          565
+        ],
+        [
+          845,
+          699.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": "p_prepare",
+      "dst": "p_frame",
+      "points": [
+        [
+          845,
+          807.0
+        ],
+        [
+          845,
+          864.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": "p_frame",
+      "dst": "p_timeout",
+      "points": [
+        [
+          845,
+          1020.0
+        ],
+        [
+          845,
+          1055.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": "p_timeout",
+      "dst": "p_end",
+      "points": [
+        [
+          1027.0,
+          1126
+        ],
+        [
+          1064,
+          1126
+        ],
+        [
+          1064,
+          2006
+        ],
+        [
+          845,
+          2006
+        ],
+        [
+          845,
+          2029.0
+        ]
+      ],
+      "label": "是"
+    },
+    {
+      "src": "p_timeout",
+      "dst": "p_stable",
+      "points": [
+        [
+          845,
+          1197.0
+        ],
+        [
+          845,
+          1231.0
+        ]
+      ],
+      "label": "否"
+    },
+    {
+      "src": "p_stable",
+      "dst": "p_frame",
+      "points": [
+        [
+          670.0,
+          1301
+        ],
+        [
+          645,
+          1301
+        ],
+        [
+          645,
+          942
+        ],
+        [
+          670.0,
+          942
+        ]
+      ],
+      "label": "否"
+    },
+    {
+      "src": "p_stable",
+      "dst": "p_return",
+      "points": [
+        [
+          845,
+          1371.0
+        ],
+        [
+          845,
+          1418.0
+        ]
+      ],
+      "label": "是"
+    },
+    {
+      "src": "p_return",
+      "dst": "p_stop",
+      "points": [
+        [
+          845,
+          1522.0
+        ],
+        [
+          845,
+          1576.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": "p_stop",
+      "dst": "p_end",
+      "points": [
+        [
+          1020.0,
+          1644
+        ],
+        [
+          1064,
+          1644
+        ],
+        [
+          1064,
+          2006
+        ],
+        [
+          845,
+          2006
+        ],
+        [
+          845,
+          2029.0
+        ]
+      ],
+      "label": "是"
+    },
+    {
+      "src": "p_stop",
+      "dst": "p_execute",
+      "points": [
+        [
+          845,
+          1712.0
+        ],
+        [
+          845,
+          1766.0
+        ]
+      ],
+      "label": "否"
+    },
+    {
+      "src": "p_execute",
+      "dst": "p_prepare",
+      "points": [
+        [
+          670.0,
+          1822
+        ],
+        [
+          620,
+          1822
+        ],
+        [
+          620,
+          753
+        ],
+        [
+          670.0,
+          753
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": null,
+      "dst": "r_input",
+      "points": [
+        [
+          1385,
+          565
+        ],
+        [
+          1385,
+          699.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": "r_input",
+      "dst": "r_features",
+      "points": [
+        [
+          1385,
+          807.0
+        ],
+        [
+          1385,
+          889.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": "r_features",
+      "dst": "r_gate",
+      "points": [
+        [
+          1385,
+          1067.0
+        ],
+        [
+          1385,
+          1120.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": "r_gate",
+      "dst": "r_match",
+      "points": [
+        [
+          1385,
+          1300.0
+        ],
+        [
+          1385,
+          1356.0
+        ]
+      ],
+      "label": "是"
+    },
+    {
+      "src": "r_gate",
+      "dst": "r_unknown",
+      "points": [
+        [
+          1571.0,
+          1210
+        ],
+        [
+          1610,
+          1210
+        ],
+        [
+          1610,
+          1954
+        ],
+        [
+          1560.0,
+          1954
+        ]
+      ],
+      "label": "否"
+    },
+    {
+      "src": "r_match",
+      "dst": "r_send",
+      "points": [
+        [
+          1385,
+          1464.0
+        ],
+        [
+          1385,
+          1551.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": "r_send",
+      "dst": "r_play",
+      "points": [
+        [
+          1385,
+          1659.0
+        ],
+        [
+          1385,
+          1739.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": "r_play",
+      "dst": "r_end",
+      "points": [
+        [
+          1210.0,
+          1793
+        ],
+        [
+          1179,
+          1793
+        ],
+        [
+          1179,
+          2024
+        ],
+        [
+          1385,
+          2024
+        ],
+        [
+          1385,
+          2041.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": "r_unknown",
+      "dst": "r_end",
+      "points": [
+        [
+          1385,
+          1993.0
+        ],
+        [
+          1385,
+          2041.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": null,
+      "dst": "d_input",
+      "points": [
+        [
+          1925,
+          565
+        ],
+        [
+          1925,
+          699.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": "d_input",
+      "dst": "d_exit",
+      "points": [
+        [
+          1925,
+          807.0
+        ],
+        [
+          1925,
+          850.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": "d_exit",
+      "dst": "d_query",
+      "points": [
+        [
+          1925,
+          988.0
+        ],
+        [
+          1925,
+          1024.0
+        ]
+      ],
+      "label": "否"
+    },
+    {
+      "src": "d_exit",
+      "dst": "d_end",
+      "points": [
+        [
+          2100.0,
+          919
+        ],
+        [
+          2154,
+          919
+        ],
+        [
+          2154,
+          2018
+        ],
+        [
+          1925,
+          2018
+        ],
+        [
+          1925,
+          2041.0
+        ]
+      ],
+      "label": "是"
+    },
+    {
+      "src": "d_query",
+      "dst": "d_chunk",
+      "points": [
+        [
+          1925,
+          1152.0
+        ],
+        [
+          1925,
+          1197.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": "d_chunk",
+      "dst": "d_segment",
+      "points": [
+        [
+          1925,
+          1305.0
+        ],
+        [
+          1925,
+          1338.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": "d_segment",
+      "dst": "d_speak",
+      "points": [
+        [
+          1925,
+          1498.0
+        ],
+        [
+          1925,
+          1532.0
+        ]
+      ],
+      "label": "是"
+    },
+    {
+      "src": "d_segment",
+      "dst": "d_done",
+      "points": [
+        [
+          1740.0,
+          1418
+        ],
+        [
+          1737,
+          1418
+        ],
+        [
+          1737,
+          1750
+        ],
+        [
+          1750.0,
+          1750
+        ]
+      ],
+      "label": "否"
+    },
+    {
+      "src": "d_speak",
+      "dst": "d_done",
+      "points": [
+        [
+          1925,
+          1634.0
+        ],
+        [
+          1925,
+          1682.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": "d_done",
+      "dst": "d_chunk",
+      "points": [
+        [
+          2100.0,
+          1750
+        ],
+        [
+          2126,
+          1750
+        ],
+        [
+          2126,
+          1251
+        ],
+        [
+          2100.0,
+          1251
+        ]
+      ],
+      "label": "否"
+    },
+    {
+      "src": "d_done",
+      "dst": "d_tail",
+      "points": [
+        [
+          1925,
+          1818.0
+        ],
+        [
+          1925,
+          1861.0
+        ]
+      ],
+      "label": "是"
+    },
+    {
+      "src": "d_tail",
+      "dst": "d_input",
+      "points": [
+        [
+          1750.0,
+          1915
+        ],
+        [
+          1710,
+          1915
+        ],
+        [
+          1710,
+          753
+        ],
+        [
+          1750.0,
+          753
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": "v_end",
+      "dst": null,
+      "points": [
+        [
+          305,
+          2111.0
+        ],
+        [
+          305,
+          2180
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": "p_end",
+      "dst": null,
+      "points": [
+        [
+          845,
+          2123.0
+        ],
+        [
+          845,
+          2180
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": "r_end",
+      "dst": null,
+      "points": [
+        [
+          1385,
+          2111.0
+        ],
+        [
+          1385,
+          2180
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": "d_end",
+      "dst": null,
+      "points": [
+        [
+          1925,
+          2111.0
+        ],
+        [
+          1925,
+          2180
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": null,
+      "dst": null,
+      "points": [
+        [
+          305,
+          2180
+        ],
+        [
+          1925,
+          2180
+        ]
+      ],
+      "label": null
+    },
+    {
+      "src": null,
+      "dst": "finish",
+      "points": [
+        [
+          1120,
+          2180
+        ],
+        [
+          1120,
+          2244.0
+        ]
+      ],
+      "label": null
+    }
+  ],
+  "note": "Overall software design with four modes. No automatic hotword-stream restart is drawn."
+}

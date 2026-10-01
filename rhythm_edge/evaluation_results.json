@@ -1,0 +1,436 @@
+{
+  "database_names": [
+    "1.wav",
+    "2.wav",
+    "3.wav",
+    "4.wav",
+    "5.wav"
+  ],
+  "tested": 25,
+  "correct": 25,
+  "per_condition": {
+    "原始WAV": {
+      "correct": 5,
+      "total": 5
+    },
+    "起始延迟加15dB噪声": {
+      "correct": 5,
+      "total": 5
+    },
+    "速度加快2%": {
+      "correct": 5,
+      "total": 5
+    },
+    "速度减慢2%": {
+      "correct": 5,
+      "total": 5
+    },
+    "限带加70ms回声": {
+      "correct": 5,
+      "total": 5
+    }
+  },
+  "rows": [
+    {
+      "source": "1.wav",
+      "condition": "原始WAV",
+      "predicted": "1.wav",
+      "correct": true,
+      "score": 1.0,
+      "margin": 0.7737,
+      "seconds_on_this_computer": 0.0538,
+      "scores": {
+        "1.wav": 1.0,
+        "4.wav": 0.2263,
+        "2.wav": 0.2121,
+        "3.wav": 0.1868,
+        "5.wav": 0.1727
+      }
+    },
+    {
+      "source": "1.wav",
+      "condition": "起始延迟加15dB噪声",
+      "predicted": "1.wav",
+      "correct": true,
+      "score": 0.8178,
+      "margin": 0.6135,
+      "seconds_on_this_computer": 0.0228,
+      "scores": {
+        "1.wav": 0.8178,
+        "2.wav": 0.2043,
+        "3.wav": 0.1865,
+        "4.wav": 0.1603,
+        "5.wav": 0.1596
+      }
+    },
+    {
+      "source": "1.wav",
+      "condition": "速度加快2%",
+      "predicted": "1.wav",
+      "correct": true,
+      "score": 0.5633,
+      "margin": 0.2888,
+      "seconds_on_this_computer": 0.0135,
+      "scores": {
+        "1.wav": 0.5633,
+        "2.wav": 0.2746,
+        "3.wav": 0.2184,
+        "4.wav": 0.1728,
+        "5.wav": 0.142
+      }
+    },
+    {
+      "source": "1.wav",
+      "condition": "速度减慢2%",
+      "predicted": "1.wav",
+      "correct": true,
+      "score": 0.4878,
+      "margin": 0.2387,
+      "seconds_on_this_computer": 0.0155,
+      "scores": {
+        "1.wav": 0.4878,
+        "4.wav": 0.2491,
+        "2.wav": 0.2315,
+        "3.wav": 0.1694,
+        "5.wav": 0.1286
+      }
+    },
+    {
+      "source": "1.wav",
+      "condition": "限带加70ms回声",
+      "predicted": "1.wav",
+      "correct": true,
+      "score": 0.6856,
+      "margin": 0.4316,
+      "seconds_on_this_computer": 0.0132,
+      "scores": {
+        "1.wav": 0.6856,
+        "2.wav": 0.254,
+        "4.wav": 0.1742,
+        "3.wav": 0.1676,
+        "5.wav": 0.1617
+      }
+    },
+    {
+      "source": "2.wav",
+      "condition": "原始WAV",
+      "predicted": "2.wav",
+      "correct": true,
+      "score": 1.0,
+      "margin": 0.6352,
+      "seconds_on_this_computer": 0.0473,
+      "scores": {
+        "2.wav": 1.0,
+        "4.wav": 0.3648,
+        "1.wav": 0.2069,
+        "3.wav": 0.1795,
+        "5.wav": 0.1787
+      }
+    },
+    {
+      "source": "2.wav",
+      "condition": "起始延迟加15dB噪声",
+      "predicted": "2.wav",
+      "correct": true,
+      "score": 0.9387,
+      "margin": 0.6063,
+      "seconds_on_this_computer": 0.012,
+      "scores": {
+        "2.wav": 0.9387,
+        "4.wav": 0.3324,
+        "1.wav": 0.1906,
+        "5.wav": 0.1776,
+        "3.wav": 0.167
+      }
+    },
+    {
+      "source": "2.wav",
+      "condition": "速度加快2%",
+      "predicted": "2.wav",
+      "correct": true,
+      "score": 0.5868,
+      "margin": 0.2015,
+      "seconds_on_this_computer": 0.0119,
+      "scores": {
+        "2.wav": 0.5868,
+        "4.wav": 0.3854,
+        "1.wav": 0.2042,
+        "5.wav": 0.185,
+        "3.wav": 0.1722
+      }
+    },
+    {
+      "source": "2.wav",
+      "condition": "速度减慢2%",
+      "predicted": "2.wav",
+      "correct": true,
+      "score": 0.5588,
+      "margin": 0.3314,
+      "seconds_on_this_computer": 0.0154,
+      "scores": {
+        "2.wav": 0.5588,
+        "1.wav": 0.2274,
+        "4.wav": 0.2159,
+        "5.wav": 0.2111,
+        "3.wav": 0.1731
+      }
+    },
+    {
+      "source": "2.wav",
+      "condition": "限带加70ms回声",
+      "predicted": "2.wav",
+      "correct": true,
+      "score": 0.7586,
+      "margin": 0.4876,
+      "seconds_on_this_computer": 0.0108,
+      "scores": {
+        "2.wav": 0.7586,
+        "4.wav": 0.271,
+        "1.wav": 0.2288,
+        "5.wav": 0.1557,
+        "3.wav": 0.1443
+      }
+    },
+    {
+      "source": "3.wav",
+      "condition": "原始WAV",
+      "predicted": "3.wav",
+      "correct": true,
+      "score": 1.0,
+      "margin": 0.7868,
+      "seconds_on_this_computer": 0.0537,
+      "scores": {
+        "3.wav": 1.0,
+        "2.wav": 0.2132,
+        "1.wav": 0.1949,
+        "4.wav": 0.1929,
+        "5.wav": 0.1796
+      }
+    },
+    {
+      "source": "3.wav",
+      "condition": "起始延迟加15dB噪声",
+      "predicted": "3.wav",
+      "correct": true,
+      "score": 0.8764,
+      "margin": 0.6439,
+      "seconds_on_this_computer": 0.0169,
+      "scores": {
+        "3.wav": 0.8764,
+        "4.wav": 0.2325,
+        "5.wav": 0.1796,
+        "2.wav": 0.1779,
+        "1.wav": 0.1574
+      }
+    },
+    {
+      "source": "3.wav",
+      "condition": "速度加快2%",
+      "predicted": "3.wav",
+      "correct": true,
+      "score": 0.6319,
+      "margin": 0.31,
+      "seconds_on_this_computer": 0.015,
+      "scores": {
+        "3.wav": 0.6319,
+        "5.wav": 0.3219,
+        "4.wav": 0.2359,
+        "2.wav": 0.1735,
+        "1.wav": 0.1667
+      }
+    },
+    {
+      "source": "3.wav",
+      "condition": "速度减慢2%",
+      "predicted": "3.wav",
+      "correct": true,
+      "score": 0.631,
+      "margin": 0.4243,
+      "seconds_on_this_computer": 0.0127,
+      "scores": {
+        "3.wav": 0.631,
+        "1.wav": 0.2067,
+        "5.wav": 0.1921,
+        "2.wav": 0.1906,
+        "4.wav": 0.175
+      }
+    },
+    {
+      "source": "3.wav",
+      "condition": "限带加70ms回声",
+      "predicted": "3.wav",
+      "correct": true,
+      "score": 0.6844,
+      "margin": 0.4728,
+      "seconds_on_this_computer": 0.0112,
+      "scores": {
+        "3.wav": 0.6844,
+        "5.wav": 0.2116,
+        "4.wav": 0.1903,
+        "1.wav": 0.1675,
+        "2.wav": 0.126
+      }
+    },
+    {
+      "source": "4.wav",
+      "condition": "原始WAV",
+      "predicted": "4.wav",
+      "correct": true,
+      "score": 1.0,
+      "margin": 0.6338,
+      "seconds_on_this_computer": 0.0533,
+      "scores": {
+        "4.wav": 1.0,
+        "2.wav": 0.3662,
+        "5.wav": 0.2472,
+        "1.wav": 0.2233,
+        "3.wav": 0.1929
+      }
+    },
+    {
+      "source": "4.wav",
+      "condition": "起始延迟加15dB噪声",
+      "predicted": "4.wav",
+      "correct": true,
+      "score": 0.8805,
+      "margin": 0.5289,
+      "seconds_on_this_computer": 0.0163,
+      "scores": {
+        "4.wav": 0.8805,
+        "2.wav": 0.3515,
+        "5.wav": 0.2506,
+        "3.wav": 0.2382,
+        "1.wav": 0.2319
+      }
+    },
+    {
+      "source": "4.wav",
+      "condition": "速度加快2%",
+      "predicted": "4.wav",
+      "correct": true,
+      "score": 0.5934,
+      "margin": 0.3108,
+      "seconds_on_this_computer": 0.0161,
+      "scores": {
+        "4.wav": 0.5934,
+        "1.wav": 0.2826,
+        "5.wav": 0.2597,
+        "2.wav": 0.2222,
+        "3.wav": 0.1765
+      }
+    },
+    {
+      "source": "4.wav",
+      "condition": "速度减慢2%",
+      "predicted": "4.wav",
+      "correct": true,
+      "score": 0.5536,
+      "margin": 0.1221,
+      "seconds_on_this_computer": 0.0143,
+      "scores": {
+        "4.wav": 0.5536,
+        "2.wav": 0.4315,
+        "3.wav": 0.211,
+        "5.wav": 0.1976,
+        "1.wav": 0.1654
+      }
+    },
+    {
+      "source": "4.wav",
+      "condition": "限带加70ms回声",
+      "predicted": "4.wav",
+      "correct": true,
+      "score": 0.6732,
+      "margin": 0.4158,
+      "seconds_on_this_computer": 0.0139,
+      "scores": {
+        "4.wav": 0.6732,
+        "2.wav": 0.2574,
+        "1.wav": 0.2204,
+        "5.wav": 0.2165,
+        "3.wav": 0.1851
+      }
+    },
+    {
+      "source": "5.wav",
+      "condition": "原始WAV",
+      "predicted": "5.wav",
+      "correct": true,
+      "score": 1.0,
+      "margin": 0.7215,
+      "seconds_on_this_computer": 0.046,
+      "scores": {
+        "5.wav": 1.0,
+        "4.wav": 0.2785,
+        "3.wav": 0.1834,
+        "2.wav": 0.1811,
+        "1.wav": 0.1769
+      }
+    },
+    {
+      "source": "5.wav",
+      "condition": "起始延迟加15dB噪声",
+      "predicted": "5.wav",
+      "correct": true,
+      "score": 0.8518,
+      "margin": 0.6158,
+      "seconds_on_this_computer": 0.0155,
+      "scores": {
+        "5.wav": 0.8518,
+        "4.wav": 0.236,
+        "2.wav": 0.2089,
+        "3.wav": 0.1998,
+        "1.wav": 0.1588
+      }
+    },
+    {
+      "source": "5.wav",
+      "condition": "速度加快2%",
+      "predicted": "5.wav",
+      "correct": true,
+      "score": 0.5779,
+      "margin": 0.3406,
+      "seconds_on_this_computer": 0.0108,
+      "scores": {
+        "5.wav": 0.5779,
+        "2.wav": 0.2372,
+        "3.wav": 0.2199,
+        "4.wav": 0.1734,
+        "1.wav": 0.1357
+      }
+    },
+    {
+      "source": "5.wav",
+      "condition": "速度减慢2%",
+      "predicted": "5.wav",
+      "correct": true,
+      "score": 0.5501,
+      "margin": 0.248,
+      "seconds_on_this_computer": 0.0172,
+      "scores": {
+        "5.wav": 0.5501,
+        "3.wav": 0.3021,
+        "4.wav": 0.2928,
+        "2.wav": 0.2459,
+        "1.wav": 0.143
+      }
+    },
+    {
+      "source": "5.wav",
+      "condition": "限带加70ms回声",
+      "predicted": "5.wav",
+      "correct": true,
+      "score": 0.6994,
+      "margin": 0.4709,
+      "seconds_on_this_computer": 0.0136,
+      "scores": {
+        "5.wav": 0.6994,
+        "4.wav": 0.2285,
+        "1.wav": 0.1998,
+        "3.wav": 0.1719,
+        "2.wav": 0.1625
+      }
+    }
+  ],
+  "note": "Only source WAVs and deterministic alterations were used; no microphone playback was tested."
+}

@@ -88,6 +88,13 @@ def play_audio_file(fname=DETECT_DING):
     stream_out.close()
     audio.terminate()
 
+def find_input_device(p, name="snowboy_mic"):
+    for index in range(p.get_device_count()):
+        info = p.get_device_info_by_index(index)
+        if info["name"].strip() == name:
+            return index
+
+    raise RuntimeError(f"找不到录音设备：{name}")
 
 class HotwordDetector(object):
     """
@@ -180,6 +187,7 @@ class HotwordDetector(object):
             self.audio = pyaudio.PyAudio()
         self.stream_in = self.audio.open(
             input=True, output=False,
+            input_device_index=find_input_device(self.audio),
             format=self.audio.get_format_from_width(
                 self.detector.BitsPerSample() / 8),
             channels=self.detector.NumChannels(),
@@ -234,6 +242,16 @@ class HotwordDetector(object):
                                              time.localtime(time.time()))
                     logger.info(message)
                     """后面增加触发后的动作"""
+                    # 关闭 Snowboy 的麦克风输入流
+                    if self.stream_in is not None:
+                        if self.stream_in.is_active():
+                            self.stream_in.stop_stream()
+                        self.stream_in.close()
+
+                    if self.audio is not None:
+                        self.audio.terminate()
+                    
+                    time.sleep(0.2)
                     robot_process()
 
                     callback = detected_callback[status-1]
