@@ -14,6 +14,7 @@ import config
 from interaction_zh import interaction
 
 pose_identifier = config.pose_identifier
+song = 0
 
 # 初始化串口
 def initialize_serial():
@@ -124,16 +125,18 @@ def action_neo(text):
 
         # 韵律识别
         elif keyword == "rhythm_recognition":
-            #play_audio("resources/rhythm.wav")
+            play_audio("resources/rhythm.wav")
             #matched_song, compare_result = rhythm_recog()
-            matched_song="choice.wav"
-            play_audio("resources/index"+matched_song) # 歌曲名称
-            if matched_song == "choice.wav":
+            #matched_song="choice.wav"
+            #play_audio("resources/index"+matched_song) # 歌曲名称
+            if song == 1 :#matched_song == "choice.wav":
+                play_audio("resources/index/choice.wav")
                 movements = DataPackageConverter("zr_chioce.odr").hex_output
             else:
+                song = 1
+                play_audio("resources/index/2.wav")
                 movements = DataPackageConverter("zr_dance.odr").hex_output
             ser.write(bytearray(movements)) # 执行动作
-            play_audio("resources/"+matched_song) # 播放歌曲
         # 语音识别自选动作
         elif keyword == "speech_recognition":
             #send_bytes = DataPackageConverter("zr_RightHandUp.bin").hex_output
