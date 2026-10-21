@@ -7,7 +7,7 @@ raw_audioList = {}
 beat_database = {}
 for tmp in audioList:
     audioName = os.path.join(tmp)
-    if audioName.endswith('.WAV') or audioName.endswith('.MP3') or audioName.endswith('.mp3'):
+    if audioName.endswith('.wav') or audioName.endswith('.MP3') or audioName.endswith('.mp3'):
         y, sr = librosa.load(audioName)
         tempo, beat_frames = librosa.beat.beat_track(y=y, sr=sr)
         beat_frames = librosa.feature.delta(beat_frames)

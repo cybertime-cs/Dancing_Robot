@@ -25,17 +25,17 @@ warnings.filterwarnings("ignore")
 
 config.initialize_pose_identifier()
     
-model = "model/redlian.pmdl"
+model = "model/dasheng_micro.pmdl"
 
 # capture SIGINT signal, e.g., Ctrl+C
 signal.signal(signal.SIGINT, signal_handler)
 
-detector = snowboydecoder.HotwordDetector(model, sensitivity=0.40)
+detector = snowboydecoder.HotwordDetector(model, sensitivity=0.50)
 print('Listening... Press Ctrl+C to exit')
 
 # main loop
 detector.start(detected_callback=snowboydecoder.play_audio_file,
                 interrupt_check=interrupt_callback,
-                sleep_time=0.03)
+                sleep_time=0.3)
 
 detector.terminate()
