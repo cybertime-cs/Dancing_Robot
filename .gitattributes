@@ -1,0 +1,10 @@
+* text=auto eol=lf
+*.sh text eol=lf
+*.mp3 binary
+*.MP3 binary
+*.wav binary
+*.jpg binary
+*.png binary
+*.docx binary
+*.model binary
+*.gz binary

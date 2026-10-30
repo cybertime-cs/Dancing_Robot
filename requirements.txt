@@ -1,0 +1,6 @@
+sherpa-onnx
+sounddevice
+PyAudio
+numpy
+pyserial
+smbus2

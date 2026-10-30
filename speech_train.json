@@ -1,0 +1,321 @@
+{
+  "hardware": {},
+  "master_wake": {
+    "title": "主唤醒（解锁表演）",
+    "phrases": [
+      "星途已定，即刻启航",
+      "心徒一定即刻启航",
+      "新图一定即刻起航",
+      "新图已定即刻启航",
+      "一定",
+      "启航",
+      "起航"
+    ],
+    "steps": [
+      {
+        "type": "audio",
+        "file": "resources/audio/就位.mp3",
+        "gain_db": 6
+      }
+    ]
+  },
+  "asr": {
+    "model_dir": "models/asr",
+    "tokens": "tokens.txt",
+    "encoder": "encoder-epoch-99-avg-1.onnx",
+    "decoder": "decoder-epoch-99-avg-1.onnx",
+    "joiner": "joiner-epoch-99-avg-1.onnx",
+    "vad_model": "models/silero_vad.onnx",
+    "sample_rate": 16000,
+    "num_threads": 2,
+    "alsa_device": "pulse",
+    "vad_threshold": 0.25,
+    "vad_min_silence": 0.5,
+    "vad_min_speech": 0.3,
+    "vad_max_speech": 10
+  },
+  "commands": {
+    "wake": {
+      "title": "唤醒银河号",
+      "phrases": [
+        "银河银河",
+        "银河号银河号",
+        "银号银号",
+        "银河河"
+      ],
+      "steps": [
+        {
+          "type": "audio",
+          "file": "resources/audio/我在.mp3"
+        }
+      ]
+    },
+    "self_check": {
+      "title": "机体自检",
+      "phrases": [
+        "检测机体状态",
+        "检测机体",
+        "检查机体状态",
+        "检测身体状态",
+        "检测集体状态",
+        "检测积极状态",
+        "检测机器状态"
+      ],
+      "steps": [
+        {
+          "type": "audio",
+          "file": "resources/audio/收到。。。自检.mp3"
+        },
+        {
+          "type": "show",
+          "music": "resources/audio/动作1.mp3",
+          "action": "dongzuo1.odr"
+        },
+        {
+          "type": "note",
+          "text": "动作1灯光：尾部塔、控制室和中部流水灯；风扇灯；尾部引擎灯，按剧本时序控制。"
+        },
+        {
+          "type": "audio",
+          "file": "resources/audio/引擎。。。任务.mp3"
+        }
+      ]
+    },
+    "depart": {
+      "title": "驶离地球",
+      "phrases": [
+        "银河号出发",
+        "银河号，出发",
+        "出发",
+        "银号出发"
+      ],
+      "steps": [
+        {
+          "type": "show",
+          "music": "resources/audio/动作2.mp3",
+          "action": "dongzuo2.odr"
+        },
+        {
+          "type": "note",
+          "text": "动作2：音乐第7秒风扇转动；灯光和呼吸效果按剧本控制。"
+        }
+      ]
+    },
+    "start_antimatter": {
+      "title": "启动反物质引擎",
+      "phrases": [
+        "银河号启动反物质引擎目标比邻星b",
+        "启动反物质引擎",
+        "目标比邻星b",
+        "启动反物质引擎目标比例星b",
+        "反物质引擎",
+        "启动房屋之隐情",
+        "二启动反复制引擎目标比零星B",
+        "比零星",
+        "比邻星",
+        "隐形"
+      ],
+      "steps": [
+        {
+          "type": "audio",
+          "file": "resources/audio/银河。。。启动.mp3"
+        },
+        {
+          "type": "audio",
+          "file": "resources/audio/音效咻.mp3"
+        },
+        {
+          "type": "show",
+          "music": "resources/audio/动作3.mp3",
+          "action": "dongzuo3.odr"
+        },
+        {
+          "type": "note",
+          "text": "动作3灯光：按 0-32、32-42、42-75、75-86、86-96、96-104、104-120 秒剧本时序控制。"
+        },
+        {
+          "type": "audio",
+          "file": "resources/audio/确认。。。动力.mp3"
+        }
+      ]
+    },
+    "energy_report": {
+      "title": "汇报能源储备",
+      "phrases": [
+        "汇报当前能源储备",
+        "汇报能源储备",
+        "当前能源储备",
+        "汇报能量储备",
+        "汇报当前人员储备",
+        "汇报当前的储备",
+        "能源储备",
+        "汇报当前能原",
+        "对我当前能源储备",
+        "对报当前能源储备",
+        "宝当前能源储备"
+      ],
+      "steps": [
+        {
+          "type": "audio",
+          "file": "resources/audio/剩余。。90%.mp3"
+        }
+      ]
+    },
+    "landing": {
+      "title": "准备着陆",
+      "phrases": [
+        "准备着陆开展探测",
+        "准备着陆",
+        "着陆开展探测",
+        "准备降落开展探测",
+        "准备着"
+      ],
+      "steps": [
+        {
+          "type": "audio",
+          "file": "resources/audio/收到。。。着陆.mp3"
+        },
+        {
+          "type": "show",
+          "music": "resources/audio/动作4.mp3",
+          "action": "dongzuo4.odr"
+        },
+        {
+          "type": "note",
+          "text": "动作4：风扇持续转动；11-40流水、40-69红闪、69-73红爆闪、73-84蓝流水。"
+        },
+        {
+          "type": "audio",
+          "file": "resources/audio/已成功着陆.mp3"
+        }
+      ]
+    },
+    "environment_scan": {
+      "title": "检测星球环境",
+      "phrases": [
+        "检测星球环境",
+        "检测环境",
+        "检测这个星球环境",
+        "检验星球环境"
+      ],
+      "steps": [
+        {
+          "type": "audio",
+          "file": "resources/audio/着陆。。。生存.mp3"
+        }
+      ]
+    },
+    "continue_scan": {
+      "title": "继续检测",
+      "phrases": [
+        "收到继续检测",
+        "继续检测",
+        "继续探测",
+        "继续检查"
+      ],
+      "steps": [
+        {
+          "type": "show",
+          "music": "resources/audio/动作5.mp3",
+          "action": "dongzuo5.odr"
+        },
+        {
+          "type": "note",
+          "text": "动作5：所有灯蓝红交替、2秒一循环，最后红色常亮。"
+        },
+        {
+          "type": "audio",
+          "file": "resources/audio/警告。。。船体.mp3"
+        }
+      ]
+    },
+    "analyze_enemy": {
+      "title": "分析敌人数据",
+      "phrases": [
+        "银河号分析敌人数据",
+        "分析敌人数据",
+        "分析敌人",
+        "分析敌人的数据",
+        "银河哈分析点数据",
+        "银河号分析底下数据",
+        "一个号分析敌人数据"
+      ],
+      "steps": [
+        {
+          "type": "audio",
+          "file": "resources/audio/收到，正在识别.mp3"
+        },
+        {
+          "type": "audio",
+          "file": "resources/audio/音效识别声改.mp3"
+        },
+        {
+          "type": "audio",
+          "file": "resources/audio/检测到。。。关节处.mp3"
+        },
+        {
+          "type": "audio",
+          "file": "resources/audio/音效识别声改2.mp3"
+        },
+        {
+          "type": "audio",
+          "file": "resources/audio/检测到。。。翅膀处.mp3"
+        },
+        {
+          "type": "audio",
+          "file": "resources/audio/音效识别声改3.mp3"
+        },
+        {
+          "type": "audio",
+          "file": "resources/audio/检测到。。。尾部.mp3"
+        }
+      ]
+    },
+    "counterattack": {
+      "title": "制定反击策略",
+      "phrases": [
+        "银河号制定反击策略击退他们",
+        "制定反击策略击退他们",
+        "制定反击策略",
+        "击退他们"
+      ],
+      "steps": [
+        {
+          "type": "audio",
+          "file": "resources/audio/收到。。。开始.mp3"
+        },
+        {
+          "type": "show",
+          "music": "resources/audio/动作6.mp3",
+          "action": "dongzuo6.odr"
+        },
+        {
+          "type": "note",
+          "text": "动作6：按剧本 0-116 秒灯光时序控制，末段蓝色常亮。"
+        },
+        {
+          "type": "audio",
+          "file": "resources/audio/敌方。。。解除.mp3"
+        }
+      ]
+    },
+    "mission_report": {
+      "title": "汇报任务完成情况",
+      "return_to_master_wake": true,
+      "phrases": [
+        "银河号汇报当前任务完成情况",
+        "汇报当前任务完成情况",
+        "汇报任务完成情况",
+        "汇报当前完成情况",
+        "任务完成情况",
+        "完成情况"
+      ],
+      "steps": [
+        {
+          "type": "audio",
+          "file": "resources/audio/敌方。。。停止.mp3"
+        }
+      ]
+    }
+  }
+}

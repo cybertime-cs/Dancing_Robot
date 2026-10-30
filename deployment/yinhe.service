@@ -1,0 +1,16 @@
+[Unit]
+Description=Yinhe Pro Streaming Robot
+After=default.target pipewire.service pipewire-pulse.service
+Wants=pipewire.service pipewire-pulse.service
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi/Desktop/yinhe_pro
+ExecStartPre=/bin/sleep 5
+ExecStart=/home/pi/Desktop/yinhe_pro/.venv/bin/python -u /home/pi/Desktop/yinhe_pro/yinhe_robot.py
+Environment=PYTHONUNBUFFERED=1
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target

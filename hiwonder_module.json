@@ -1,0 +1,10 @@
+{
+  "i2c_bus": 1,
+  "i2c_addresses": [
+    "0x34",
+    "0x33"
+  ],
+  "result_register": "0x64",
+  "poll_interval": 0.05,
+  "command_ids": {}
+}
