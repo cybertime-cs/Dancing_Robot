@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=蜂后演出
+Comment=语音唤醒、台词与五幕动作
+# 请将路径替换为实际 pi 目录；start.sh 可通过 BT_MAC 配置已配对音箱。
+Exec=lxterminal -e bash /home/pi/dancing_robot/pi/scripts/start.sh
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=Utility;

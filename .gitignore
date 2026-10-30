@@ -1,0 +1,62 @@
+__pycache__/
+Python3/__pycache__/
+*.py[cod]
+*$py.class
+.DS_Store
+._*
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+temp_record/
+last_result.jpg
+result.txt
+
+# 部署脚本创建的虚拟环境（体积大、与机器相关，不入库）
+.venv/
+
+# sherpa-onnx 模型体积大（KWS 约 5M + SenseVoice 约 230M），
+# 用 scripts/prepare_sherpa_models.py 在本地准备，不进 git。
+# 只保留小体积的配置文本（keywords_raw.txt / keywords.txt / README.md）。
+models/kws/*.onnx
+models/sensevoice/*
+models/*/test_wavs/
+
+# 例外：KWS 的 tokens.txt 仅 1.6KB，且 scripts/make_keywords.py 生成唤醒词时要用到，
+# 所以保留入库（SenseVoice 的 tokens.txt 无脚本引用，随模型一起下载即可）。
+!models/kws/tokens.txt
+
+# Local runtime files and downloaded model weights (restore with setup scripts).
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.agents/
+.codex/
+logs/
+*.log
+temp_record/
+.env
+.env.*
+!.env.example
+runtime.env
+*.onnx
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.tflite
+*.h5
+*.hdf5
+*.pb
+*.engine
+*.plan
+models/**/test_wavs/
+*.tar.bz2
+*.download
+
+# Keep the small ASR vocabulary; model weights are downloaded separately.
+!models/sensevoice/tokens.txt

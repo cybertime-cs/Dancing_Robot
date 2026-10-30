@@ -1,0 +1,7 @@
+# 蜂后：语音唤醒、台词识别、音频与串口。
+numpy<3
+PyAudio
+pyserial
+sherpa-onnx>=1.13.8
+# 用于生成唤醒词表及台词同音匹配。
+pypinyin>=0.50,<1

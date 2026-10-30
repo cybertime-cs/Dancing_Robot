@@ -1,0 +1,22 @@
+[Unit]
+Description=FengHou voice and performance controller
+Wants=pipewire.service pipewire-pulse.service wireplumber.service
+After=pipewire.service pipewire-pulse.service wireplumber.service
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+WorkingDirectory=@PROJECT_DIR@
+ExecStart=/bin/bash "@PROJECT_DIR@/scripts/pi_autostart.sh"
+Environment=PYTHONUNBUFFERED=1
+Restart=on-failure
+RestartPreventExitStatus=1 73 130
+SuccessExitStatus=130
+RestartSec=10
+KillSignal=SIGINT
+TimeoutStopSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target

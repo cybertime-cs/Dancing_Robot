@@ -1,0 +1,146 @@
+[
+  {
+    "id": "forward",
+    "label": "前进",
+    "file": "scwforward.odr",
+    "audio": "forward",
+    "parallel_audio": false,
+    "timeout_seconds": 50
+  },
+  {
+    "id": "backward",
+    "label": "后退",
+    "file": "scwbackward.odr",
+    "audio": "backward",
+    "parallel_audio": false,
+    "timeout_seconds": 50
+  },
+  {
+    "id": "MoveToLeft",
+    "label": "左移",
+    "file": "scwMoveToLeft.odr",
+    "audio": "MoveToLeft",
+    "parallel_audio": false,
+    "timeout_seconds": 50
+  },
+  {
+    "id": "MoveToRight",
+    "label": "右移",
+    "file": "scwMoveToRight.odr",
+    "audio": "MoveToRight",
+    "parallel_audio": false,
+    "timeout_seconds": 50
+  },
+  {
+    "id": "LeftLegStretch",
+    "label": "左脚撑",
+    "file": "scwLeftLegStretch.bin",
+    "audio": "LeftLegStretch",
+    "parallel_audio": false,
+    "timeout_seconds": 15
+  },
+  {
+    "id": "RightLegStretch",
+    "label": "右脚撑",
+    "file": "scwRightLegStretch.bin",
+    "audio": "RightLegStretch",
+    "parallel_audio": false,
+    "timeout_seconds": 15
+  },
+  {
+    "id": "LeftHandUp",
+    "label": "举左手",
+    "file": "scwLeftHandUp.bin",
+    "audio": "LeftHandUp",
+    "parallel_audio": false,
+    "timeout_seconds": 15
+  },
+  {
+    "id": "BothHandsUp",
+    "label": "举双手",
+    "file": "scwBothHandsUp.bin",
+    "audio": "BothHandsUp",
+    "parallel_audio": false,
+    "timeout_seconds": 15
+  },
+  {
+    "id": "TurnLeft",
+    "label": "向左转",
+    "file": "scwTurnLeft.odr",
+    "audio": "TurnLeft",
+    "parallel_audio": false,
+    "timeout_seconds": 50
+  },
+  {
+    "id": "TurnRight",
+    "label": "向右转",
+    "file": "scwTurnRight.odr",
+    "audio": "TurnRight",
+    "parallel_audio": false,
+    "timeout_seconds": 50
+  },
+  {
+    "id": "YuYinChaYao",
+    "label": "叉腰",
+    "file": "scwYuYinChaYao.bin",
+    "audio": "YuYinChaYao",
+    "parallel_audio": false,
+    "timeout_seconds": 15
+  },
+  {
+    "id": "YuYinJuGong",
+    "label": "鞠躬",
+    "file": "scwYuYinJuGong.bin",
+    "audio": "YuYinJuGong",
+    "parallel_audio": false,
+    "timeout_seconds": 15
+  },
+  {
+    "id": "YuYinKuoXiong",
+    "label": "扩胸",
+    "file": "scwYuYinKuoXiong.bin",
+    "audio": "YuYinKuoXiong",
+    "parallel_audio": false,
+    "timeout_seconds": 15
+  },
+  {
+    "id": "act1",
+    "label": "第一幕",
+    "file": "act1.odr",
+    "audio": "act1",
+    "parallel_audio": true,
+    "timeout_seconds": 180
+  },
+  {
+    "id": "act2",
+    "label": "第二幕",
+    "file": "act2.odr",
+    "audio": "act2",
+    "parallel_audio": true,
+    "timeout_seconds": 180
+  },
+  {
+    "id": "act3",
+    "label": "第三幕",
+    "file": "act3.odr",
+    "audio": "act3",
+    "parallel_audio": true,
+    "timeout_seconds": 180
+  },
+  {
+    "id": "act4",
+    "label": "第四幕",
+    "file": "act4.odr",
+    "audio": "act4",
+    "parallel_audio": true,
+    "timeout_seconds": 180
+  },
+  {
+    "id": "act5",
+    "label": "第五幕",
+    "file": "act5.odr",
+    "audio": "act5",
+    "parallel_audio": true,
+    "timeout_seconds": 180
+  }
+]

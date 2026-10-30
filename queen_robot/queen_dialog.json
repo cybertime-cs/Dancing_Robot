@@ -1,0 +1,115 @@
+{
+  "title": "蜂后觉醒——生态守护者",
+  "initial": "BOOT",
+  "timing": {
+    "vision_first_seconds": 2,
+    "vision_change_seconds": 2,
+    "audio_timeout_seconds": 240,
+    "dance_timeout_seconds": 180
+  },
+  "listening": {
+    "backend": "silero",
+    "vad_threshold": 0.65,
+    "energy_threshold": 1500,
+    "min_speech_seconds": 0.2,
+    "silence_seconds": 0.9,
+    "pre_roll_seconds": 0.3,
+    "max_utterance_seconds": 15
+  },
+  "startup": [{"audio": "se-1"}],
+  "states": {
+    "BOOT": {
+      "prompt": "蜂后，蜂后。",
+      "keywords": ["蜂后"],
+      "steps": [{"audio": "1-1"}],
+      "next": "SELF_CHECK"
+    },
+    "SELF_CHECK": {
+      "prompt": "执行机体自检。",
+      "keywords": ["机体自检", "身体自检"],
+      "steps": [{"dance": "act1"}, {"audio": "se-2"}, {"audio": "1-3"}],
+      "next": "SEARCH"
+    },
+    "SEARCH": {
+      "prompt": "蜂后，寻找生命，启动生态恢复。",
+      "keywords": ["寻找生命", "启动生态恢复"],
+      "steps": [{"audio": "1-4"}, {"audio": "bgm1"}],
+      "next": "VISION_START"
+    },
+    "VISION_START": {
+      "prompt": "蜂后，启动环境视觉识别系统，分析前方区域。",
+      "keywords": ["环境视觉识别", "视觉识别系统", "启动环境识别"],
+      "steps": [{"audio": "2-1"}],
+      "next": "VISION_DESERT"
+    },
+    "VISION_DESERT": {
+      "auto": true,
+      "prompt": "请展示荒漠图片；计时演示，不调用摄像头。",
+      "steps": [{"notice": "展示：荒漠（视觉识别1.png）"}, {"wait_setting": "vision_first_seconds"}, {"audio": "se-3"}, {"audio": "2-2"}],
+      "next": "VISION_LAND"
+    },
+    "VISION_LAND": {
+      "auto": true,
+      "prompt": "请切换为裸露土地图片。",
+      "steps": [{"notice": "换图：裸露土地（视觉识别2.png）"}, {"wait_setting": "vision_change_seconds"}, {"audio": "se-4"}, {"audio": "2-3"}],
+      "next": "VISION_FLOWER"
+    },
+    "VISION_FLOWER": {
+      "auto": true,
+      "prompt": "请切换为花海图片。",
+      "steps": [{"notice": "换图：花海（视觉识别3.png）"}, {"wait_setting": "vision_change_seconds"}, {"audio": "se-5"}, {"audio": "2-4"}],
+      "next": "TRAVEL"
+    },
+    "TRAVEL": {
+      "prompt": "蜂后，前往目标区域，执行生态巡查任务。",
+      "keywords": ["前往目标区域", "生态巡查"],
+      "steps": [{"dance": "act2"}, {"audio": "bgm2"}],
+      "next": "RESTORE"
+    },
+    "RESTORE": {
+      "prompt": "蜂后，目标区域确认。开始执行授粉与生态恢复任务。",
+      "keywords": ["授粉", "花粉传播", "生态恢复任务"],
+      "steps": [{"audio": "3-1"}, {"audio": "se-7"}, {"dance": "act3"}, {"audio": "bgm3"}],
+      "next": "TOGETHER_THANKS"
+    },
+    "TOGETHER_THANKS": {
+      "prompt": "谢谢你，让花海重新绽放。",
+      "keywords": ["谢谢你", "花海重新绽放"],
+      "steps": [{"audio": "4-2"}],
+      "next": "TOGETHER_HOW"
+    },
+    "TOGETHER_HOW": {
+      "prompt": "那我们应该怎么做？",
+      "keywords": ["怎么做", "如何做"],
+      "steps": [{"audio": "4-3"}],
+      "next": "LIFE_DANCE"
+    },
+    "LIFE_DANCE": {
+      "prompt": "蜂后，请用你的舞蹈，为重新归来的生命献上祝福。",
+      "keywords": ["请用你的舞蹈", "献上祝福", "生命之舞"],
+      "steps": [{"audio": "se-8"}, {"dance": "act4"}, {"audio": "bgm4"}],
+      "next": "FINAL_PATROL"
+    },
+    "FINAL_PATROL": {
+      "prompt": "蜂后，生态环境正在恢复。开始最后一次花海巡礼。",
+      "keywords": ["花海巡礼", "最后一次"],
+      "steps": [{"dance": "act5"}],
+      "next": "FINAL_CONFIRM"
+    },
+    "FINAL_CONFIRM": {
+      "prompt": "蜂后，生态恢复任务完成。",
+      "keywords": ["生态恢复任务完成", "任务完成"],
+      "steps": [{"audio": "5-3"}, {"audio": "bgm5"}],
+      "next": "ENDING"
+    },
+    "ENDING": {"prompt": "五幕演出结束。", "steps": [], "next": null}
+  },
+  "demo_inputs": [
+    "蜂后，蜂后。", "执行机体自检。", "蜂后，寻找生命，启动生态恢复。",
+    "蜂后，启动环境视觉识别系统，分析前方区域。", "蜂后，前往目标区域，执行生态巡查任务。",
+    "蜂后，目标区域确认。开始执行授粉与生态恢复任务。",
+    "谢谢你，让花海重新绽放。", "那我们应该怎么做？",
+    "蜂后，请用你的舞蹈，为重新归来的生命献上祝福。",
+    "蜂后，生态环境正在恢复。开始最后一次花海巡礼。", "蜂后，生态恢复任务完成。"
+  ]
+}

@@ -1,0 +1,42 @@
+# 统一换行符，避免 Windows(CRLF) 与树莓派(LF) 之间来回产生整文件差异。
+# 本项目在 Windows 上编辑、在树莓派上运行，之前 git 里出现过 40 多个文件
+# 15325 增 / 15325 删 的“对称差异”，全都是换行符造成的假改动。
+* text=auto eol=lf
+
+# 部署脚本必须保持 LF，否则在树莓派上 bash 会报 "\r: command not found"
+*.sh text eol=lf
+Makefile text eol=lf
+*.desktop text eol=lf
+
+# 以下一律按二进制处理，禁止做换行转换
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.mp3 binary
+*.MP3 binary
+*.wav binary
+*.flac binary
+*.ogg binary
+*.npy binary
+*.pickle binary
+*.pkl binary
+*.task binary
+*.so binary
+*.a binary
+*.pmdl binary
+*.umdl binary
+*.mdl binary
+*.dubm binary
+*.ie binary
+*.mat binary
+*.fst binary
+*.stats binary
+*.apk binary
+*.zip binary
+*.pdf binary
+*.mp4 binary
+
+*.docx binary
+*.model binary
+*.onnx binary
